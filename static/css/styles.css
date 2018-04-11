@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    background-color: gray;
+    width: 400px;
+    height: 350px;
+    border: 3px solid black;
+    margin: 30px auto;
+}
+
+.friendstable {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.friendstable td {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.divtable {
+    height: 150px;
+    width: 270px;
+    overflow: scroll;
+    margin: 5px auto;
+    /* background-color: green; */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.addfriendForm {
+    width: 200px;
+    margin: 5px auto;
+}
+
+.addfriendForm button {
+    margin: 5px 65px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+}

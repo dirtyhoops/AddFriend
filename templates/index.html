@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Friends</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Friends:</h1>
+        <div class="divtable">
+            <table class="friendstable">
+                    <tr>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Friend Since</td>
+                        <td>Year</td>
+                    </tr>
+                    {% for row in friends %}
+                    <tr>
+                        <td>
+                            {{row.name}}
+                        </td>
+                        <td>    
+                            {{row.age}}
+                        </td>
+                        <td>
+                            {{row.created_at.month}} / {{row.created_at.day}}
+                        </td>
+                        <td>
+                            {{row.created_at.year}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+        </div>
+        
+
+        <h1> Add a Friend: </h1>
+        <div class="addfriendForm">
+            <form action="/add" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <label>Name: </label> 
+                        </td>
+                        <td>
+                            <input type="text" name="name"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Age: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="age">
+                        </td>
+                    </tr>
+                </table>
+                <button>Add Friend</button>
+                
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>
